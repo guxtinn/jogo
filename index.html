@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Isomeria Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="card">
+            <h1><i class="fas fa-atom"></i> Master Isomeria</h1>
+            <p>30 Questões • 3 Níveis • Ranking Global</p>
+            <input type="text" id="username" placeholder="Seu apelido..." maxlength="15">
+            <button id="start-btn" class="btn-main">Começar Desafio</button>
+            <button id="show-rank-btn" class="btn-sec">Ver Ranking</button>
+        </div>
+
+        <div id="quiz-screen" class="card hidden">
+            <div class="quiz-header">
+                <div class="header-top">
+                    <span id="difficulty-badge" class="badge">Fácil</span>
+                    <div id="timer-box"><i class="fas fa-clock"></i> <span id="timer-sec">60</span>s</div>
+                </div>
+                <div class="progress-info">
+                    <span id="progress-text">Questão 1/30</span>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <h2 id="question-text">Pergunta...</h2>
+            <div id="options-container" class="options-grid"></div>
+        </div>
+
+        <div id="result-screen" class="card hidden">
+            <h2>Fim de Jogo!</h2>
+            <div class="score-container">
+                <div class="score-circle">
+                    <span id="final-score">0</span>
+                    <small>/30</small>
+                </div>
+            </div>
+            <p id="feedback-msg"></p>
+            <button onclick="location.reload()" class="btn-main">Jogar Novamente</button>
+        </div>
+
+        <div id="rank-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3><i class="fas fa-trophy"></i> Top 10 Químicos</h3>
+                <ul id="rank-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
