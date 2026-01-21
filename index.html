@@ -11,7 +11,7 @@
     <div class="container">
         <div id="start-screen" class="card">
             <h1><i class="fas fa-atom"></i> Master Isomeria</h1>
-            <p>30 Questões • 3 Níveis • Ranking Global</p>
+            <p>Desafio de Química: 30 Questões Aleatórias</p>
             <input type="text" id="username" placeholder="Seu apelido..." maxlength="15">
             <button id="start-btn" class="btn-main">Começar Desafio</button>
             <button id="show-rank-btn" class="btn-sec">Ver Ranking</button>
@@ -21,7 +21,7 @@
             <div class="quiz-header">
                 <div class="header-top">
                     <span id="difficulty-badge" class="badge">Fácil</span>
-                    <div id="timer-box"><i class="fas fa-clock"></i> <span id="timer-sec">20</span>s</div>
+                    <div id="timer-box"><i class="fas fa-clock"></i> <span id="timer-sec">2:00</span></div>
                 </div>
                 <div class="progress-info">
                     <span id="progress-text">Questão 1/30</span>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <h2 id="question-text">Pergunta...</h2>
+            <h2 id="question-text">Carregando pergunta...</h2>
             <div id="options-container" class="options-grid"></div>
         </div>
 
@@ -48,8 +48,8 @@
 
         <div id="rank-modal" class="modal hidden">
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h3><i class="fas fa-trophy"></i> Top 10 Químicos</h3>
+                <span id="btn-fechar-rank" class="close-modal">&times;</span>
+                <h3><i class="fas fa-trophy"></i> Top 10 Isômeros</h3>
                 <ul id="rank-list"></ul>
             </div>
         </div>
